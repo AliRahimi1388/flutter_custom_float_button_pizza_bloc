@@ -173,129 +173,127 @@ class _MyHomePageState extends State<MyHomePage>
           },
         ),
       ),
-      floatingActionButton: Container(
-        child: Center(
-          child: Container(
-            height: 250.0,
-            width: 250.0,
-            child: Stack(
-              children: [
-                AnimatedAlign(
+      floatingActionButton: Center(
+        child: SizedBox(
+          height: 250.0,
+          width: 250.0,
+          child: Stack(
+            children: [
+              AnimatedAlign(
+                duration: toggle
+                    ? Duration(milliseconds: 275)
+                    : Duration(milliseconds: 875),
+                alignment: alignment1,
+                curve: toggle ? Curves.easeIn : Curves.elasticOut,
+                child: AnimatedContainer(
                   duration: toggle
                       ? Duration(milliseconds: 275)
                       : Duration(milliseconds: 875),
-                  alignment: alignment1,
-                  curve: toggle ? Curves.easeIn : Curves.elasticOut,
-                  child: AnimatedContainer(
-                    duration: toggle
-                        ? Duration(milliseconds: 275)
-                        : Duration(milliseconds: 875),
-                    curve: toggle ? Curves.easeIn : Curves.easeOut,
-                    height: size1,
-                    width: size1,
-                    decoration: BoxDecoration(
-                      color: Colors.black87,
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                    child: IconButton(
-                        icon: const Icon(Icons.local_pizza),
-                        color: Colors.white,
-                        splashColor: Colors.black54,
-                        splashRadius: 31,
-                        onPressed: _incrementCounter),
+                  curve: toggle ? Curves.easeIn : Curves.easeOut,
+                  height: size1,
+                  width: size1,
+                  decoration: BoxDecoration(
+                    color: Colors.black87,
+                    borderRadius: BorderRadius.circular(40),
                   ),
+                  child: IconButton(
+                      icon: const Icon(Icons.local_pizza),
+                      color: Colors.white,
+                      splashColor: Colors.black54,
+                      splashRadius: 31,
+                      onPressed: _incrementCounter),
                 ),
-                AnimatedAlign(
+              ),
+              AnimatedAlign(
+                duration: toggle
+                    ? Duration(milliseconds: 275)
+                    : Duration(milliseconds: 875),
+                alignment: alignment2,
+                curve: toggle ? Curves.easeIn : Curves.elasticOut,
+                child: AnimatedContainer(
                   duration: toggle
                       ? Duration(milliseconds: 275)
                       : Duration(milliseconds: 875),
-                  alignment: alignment2,
-                  curve: toggle ? Curves.easeIn : Curves.elasticOut,
-                  child: AnimatedContainer(
-                    duration: toggle
-                        ? Duration(milliseconds: 275)
-                        : Duration(milliseconds: 875),
-                    curve: toggle ? Curves.easeIn : Curves.easeOut,
-                    height: size2,
-                    width: size2,
-                    decoration: BoxDecoration(
-                      color: Colors.black87,
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                    child: IconButton(
-                        icon: const Icon(Icons.cut),
-                        color: Colors.white,
-                        splashColor: Colors.black54,
-                        splashRadius: 31,
-                        onPressed: _removeFirstTypePizzaCounter),
+                  curve: toggle ? Curves.easeIn : Curves.easeOut,
+                  height: size2,
+                  width: size2,
+                  decoration: BoxDecoration(
+                    color: Colors.black87,
+                    borderRadius: BorderRadius.circular(40),
                   ),
+                  child: IconButton(
+                      icon: const Icon(Icons.cut),
+                      color: Colors.white,
+                      splashColor: Colors.black54,
+                      splashRadius: 31,
+                      onPressed: _removeFirstTypePizzaCounter),
                 ),
-                AnimatedAlign(
+              ),
+              AnimatedAlign(
+                duration: toggle
+                    ? Duration(milliseconds: 275)
+                    : Duration(milliseconds: 875),
+                alignment: alignment3,
+                curve: toggle ? Curves.easeIn : Curves.elasticOut,
+                child: AnimatedContainer(
                   duration: toggle
                       ? Duration(milliseconds: 275)
                       : Duration(milliseconds: 875),
-                  alignment: alignment3,
-                  curve: toggle ? Curves.easeIn : Curves.elasticOut,
-                  child: AnimatedContainer(
-                    duration: toggle
-                        ? Duration(milliseconds: 275)
-                        : Duration(milliseconds: 875),
-                    curve: toggle ? Curves.easeIn : Curves.easeOut,
-                    height: size3,
-                    width: size3,
-                    decoration: BoxDecoration(
-                      color: Colors.black87,
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                    child: IconButton(
-                        icon: const Icon(Icons.local_pizza_rounded),
-                        color: Colors.white,
-                        splashColor: Colors.black54,
-                        splashRadius: 31,
-                        onPressed: _incrementFirstTypePizzaCounter),
+                  curve: toggle ? Curves.easeIn : Curves.easeOut,
+                  height: size3,
+                  width: size3,
+                  decoration: BoxDecoration(
+                    color: Colors.black87,
+                    borderRadius: BorderRadius.circular(40),
                   ),
+                  child: IconButton(
+                      icon: const Icon(Icons.local_pizza_rounded),
+                      color: Colors.white,
+                      splashColor: Colors.black54,
+                      splashRadius: 31,
+                      onPressed: _incrementFirstTypePizzaCounter),
                 ),
+              ),
 
-                Align(
-                  alignment: Alignment.center,
-                  child: Transform.rotate(
-                    angle: _animation.value * pi * (3 / 4),
-                    child: AnimatedContainer(
-                      height: toggle ? 80 : 60,
-                      width: toggle ? 80 : 60,
-                      curve: Curves.easeOut,
-                      decoration: BoxDecoration(
-                          color:
-                              toggle ? Colors.yellow[600] : Colors.green[600],
-                          borderRadius: BorderRadius.circular(60.0)),
-                      duration: Duration(milliseconds: 375),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: IconButton(
-                          splashColor: Colors.black54,
-                          splashRadius: 31,
-                          onPressed: _decrementCounter,
-                          icon: const Icon(Icons.add, size: 45.0),
-                        ),
+              Align(
+                alignment: Alignment.center,
+                child: Transform.rotate(
+                  angle: _animation.value * pi * (3 / 4),
+                  child: AnimatedContainer(
+                    height: toggle ? 80 : 60,
+                    width: toggle ? 80 : 60,
+                    curve: Curves.easeOut,
+                    decoration: BoxDecoration(
+                        color:
+                            toggle ? Colors.yellow[600] : Colors.green[600],
+                        borderRadius: BorderRadius.circular(60.0)),
+                    duration: Duration(milliseconds: 375),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: IconButton(
+                        splashColor: Colors.black54,
+                        splashRadius: 31,
+                        onPressed: _decrementCounter,
+                        icon: const Icon(Icons.add, size: 45.0),
                       ),
                     ),
                   ),
                 ),
-                // AnimatedContainer(
-                //   height: MediaQuery.of(context).size.height / 6,
-                //   width: MediaQuery.of(context).size.width / 6,
-                //   duration: const Duration(microseconds: 300),
-                //   child: FloatingActionButton(
-                //     onPressed: _decrementCounter,
-                //     backgroundColor: toggle ? Colors.orange : Colors.red,
-                //     tooltip: 'open Menu',
-                //     child: toggle
-                //         ? const Icon(Icons.close)
-                //         : const Icon(Icons.remove),
-                //   ),
-                // )
-              ],
-            ),
+              ),
+              // AnimatedContainer(
+              //   height: MediaQuery.of(context).size.height / 6,
+              //   width: MediaQuery.of(context).size.width / 6,
+              //   duration: const Duration(microseconds: 300),
+              //   child: FloatingActionButton(
+              //     onPressed: _decrementCounter,
+              //     backgroundColor: toggle ? Colors.orange : Colors.red,
+              //     tooltip: 'open Menu',
+              //     child: toggle
+              //         ? const Icon(Icons.close)
+              //         : const Icon(Icons.remove),
+              //   ),
+              // )
+            ],
           ),
         ),
       ),
